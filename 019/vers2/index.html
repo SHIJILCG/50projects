@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+     <button id="toggle">Dark mode</button>
      <div class="container">
-        <span> 
-            <div class="silde"></div>
-        </span>
+         <div class="clock">
+            <div class="needle hour"></div>
+            <div class="needle minutes"></div>
+            <div class="needle seconds"></div>
+            <div class="middle-part"></div>
+         </div>
+         <div class="time">12:00</div>
+         <div class="date">SUNDAY Jan <span id="circular">2</span></div>
      </div>
+     <script src="scrit.js"></script>
 </body>
 </html>
