@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    background-color: blueviolet;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin:0px 20px ;
+    text-align: center;
+}
+.count{
+    margin-top: 10px;
+    font-size: 40px;
+}
+@media (max-width:680px) {
+     body{
+        flex-direction: column;
+     }
+}

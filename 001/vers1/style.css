@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+}
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    flex: 0.5;
+    border-radius: 50px;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.4s ease-in;
+}
+.panel h3{
+    color: white;
+    opacity: 0;
+    font-size: 12px;
+}
+.panel.active{
+   flex: 5;
+}
+.panel.active h3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.5s;
+}
