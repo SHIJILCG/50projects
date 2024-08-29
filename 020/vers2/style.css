@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+button{
+    border: 1px solid purple;
+    background-color: purple;
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+}
+button .circle {
+    position: absolute;
+    background-color: #fff;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transform: translate(-50px,-50%) scale(0);
+    animation: scale 0.4s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50px,-50%) scale(3);
+        opacity: 0;
+    }
+}
