@@ -18,7 +18,6 @@ function dragStart(){
    setTimeout(() => this.className ='invisible',0)
 }
 function dragEnd(){
-    console.log("last drag end")
     this.className='fill'
 }
 function dragOver(e){
