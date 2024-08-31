@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+#canvas{
+    background-color:white;
+    border: 1px solid black;
+}
+.toolbar{
+    width: 800px;
+    display: flex;
+    background-color: rgb(29, 226, 226);
+    padding: 1rem;
+    border: 1px solid black;
+}
+.toolbar >*{
+    display: inline-flex;
+    background-color: bisque;
+    height: 50px;
+    width: 50px;
+    padding: .25rem;
+    margin: .25rem;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    font-size: 30px;
+}
+.toolbar >*:last-child{
+    margin-left: auto;
+}

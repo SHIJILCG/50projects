@@ -1,0 +1,88 @@
+@import url('https://fonts.googleleapis.com/css?family=Open+Sans');
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Open Sans',sans-serif;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.left-slide{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    left: 0;
+    top: 0;
+    transition: transform 0.4s ease-in-out;
+}
+.left-slide > div{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+   
+}
+.left-slide > div h1{
+    
+    font-size: 40px;
+
+}
+.right-slide{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    left: 35%;
+    top: 0;
+    transition: transform 0.4s ease-in-out;
+}
+.right-slide > div{
+    height: 100vh;
+    width: 100%;  
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.left-slide > div h1{
+    font-size: 40px;
+}
+button{
+    padding: 10px;
+    background-color: white;
+    border: 0;
+    font-size: 14px;
+    color: #aaa;
+}
+button:active{
+    color: #000;
+}
+button:focus{
+    outline: none;
+}
+.button-container button{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+.downbutton{
+   transform: translateX(-100%);
+   border-bottom-left-radius: 5px;
+   border-top-left-radius: 5px;
+}
+.upbutton{
+    transform: translateY(-100%);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+ }

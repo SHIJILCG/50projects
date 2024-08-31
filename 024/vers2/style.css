@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content:center;
+    background-color: aliceblue;
+}
+img{
+    width: 100%;
+}
+.card{
+    width: 300px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow:hidden ;
+    background-color: white;
+}
+.cardheader{
+    object-fit: cover;
+    height: 250px;
+}
+.card-content{
+    padding: 1rem;
+}
+.card-title{
+    font-size: 16px;
+    height: 20px;
+
+}
+.card-excert{
+    font-size: 14px;
+    color: rgb(86, 116, 143);
+}
+.author{
+    display: flex;
+}
+.profile_img {
+    border-radius: 50%;
+     overflow: hidden;
+    height: 30px;
+    width: 30px;
+}
+.profile_img img{
+    border-radius: 50%;
+
+}
+.author_info{
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.animated-bg{
+    background-image: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+         #edeef1 10%,
+          #f6f7f8 20%,
+           #f6f7f8 100%);
+    background-size: 200% 100%;
+    animation: makeanmi 1s linear infinite;
+}
+.animated-bg-text{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    height: 10px;
+    border-radius: 50px;
+    min-width:60px ;
+}
+
+@keyframes makeanmi {
+    0%{
+        background-size: 50% 0;
+    }
+    100%{
+        background-size: -150% 0;
+    }
+}
