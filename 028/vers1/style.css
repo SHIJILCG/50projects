@@ -70,6 +70,7 @@ body{
 .user-info ul li{
     display: flex;
     align-items: center;
+    margin: 5px 10px;
 }
 .user-info ul li strong{
     font-size: 0.9rem;
