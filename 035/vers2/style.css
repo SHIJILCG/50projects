@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+img{
+    width: 500px;
+    height: 500px;
+
+}
+.Carousel{
+    width: 500px;
+    height: 530px;
+    overflow: hidden;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.6);
+}
+.img-container{
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.4s ease-in-out;
+}
+.button-container{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    background-color: rebeccapurple;
+    border: 0;
+    width: 49.5%;
+    height: 30px;
+    color: white;
+}
