@@ -58,6 +58,9 @@ nav ul li{
     text-align: center;
     padding: 10px;
 }
+nav ul li:hover,nav ul li.active{
+    color: rebeccapurple;
+}
 nav ul li p{
     font-size: 12px;
     margin: 2px 0;
