@@ -1,6 +1,5 @@
 const result=document.getElementById('result');
 const filter=document.getElementById('Filter');
-
 const listitems=[];
 getdata()
 async function getdata() {
@@ -20,10 +19,7 @@ async function getdata() {
           result.appendChild(userEl)
     });
 }
-
 filter.addEventListener('input',(e)=> filterdata(e.target.value))
-
-
 
 function filterdata(value){
     listitems.forEach(item => {
