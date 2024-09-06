@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+
+    font-family: 'press Start 2P', sans-serif;
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+    background-color: #516dff;
+    overflow: hidden;
+}
+
+.screen {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transition: margin 0.5s ease-out;
+
+}
+
+.screen h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.btn {
+    background-color: white;
+    margin: 30px 0px;
+    padding: 15px 20px;
+    border: 0;
+    font-family: inherit;
+    color: #516dff;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(236, 228, 228); 
+}
+.screen.up {
+    margin-top: -100vh;
+}
+
+.screen ul {
+    display: flex;
+    margin-top: 50px;
+    list-style-type: none;
+}
+
+.screen ul li {
+    margin: 0px 10px;
+    height: 150px;
+    width: 150px;
+    border: 2px solid white;
+}
+
+.choose-insect-btn {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    color: white;
+
+}
+.choose-insect-btn:hover{
+    background-color: white;
+    color:#516dff;
+}
+.choose-insect-btn img {
+    width: 100px;
+    height: 100px;
+}
+#thetimer{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 20px;
+}
+#score{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 20px;
+}
+.message{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: absolute;
+    padding: 20px 0px;
+    top: 100px;
+    opacity: 0;
+}
+.message.visible{
+    opacity: 1;
+}
+.insect{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    top: 500px;
+    left: 500px;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.insect img{
+   width: 100%;
+   height: 100%;
+}
+.insect.caught{
+    transform: scale(0);
+}

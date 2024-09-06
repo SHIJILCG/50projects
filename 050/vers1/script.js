@@ -18,6 +18,56 @@ choose_insect_btns.forEach( btn =>{
           const src=img.getAttribute('src');
           const alt = img.getAttribute('alt');
           selected_insect ={src,alt}
-          screens[1].classList.add('up')
+          screens[1].classList.add('up');
+          setTimeout(() => createinsects(),1000);
+          startGame()
     })
 })
+
+function startGame(){
+    setInterval(() => increaseTime(), 1000);
+}
+function increaseTime(){
+    let m=Math.floor(seconds / 60);
+    let s = seconds % 60;
+    m = m < 10 ? `0${m}` : m
+    s = s < 10 ? `0${s}` : s
+    timeEl.innerText =`Time:${m}:${s}`
+    seconds ++
+}
+function createinsects(){
+    const insects=document.createElement('div');
+    insects.classList.add('insect');
+    const {x,y} = getrandomlocation();
+    insects.style.top =`${y}px`;
+    insects.style.left =`${x}px`;
+    insects.innerHTML = `<img src='${selected_insect.src}' alt="${selected_insect.alt}" style="transform:rotate(${Math.random() * 360})deg">`;
+    insects.addEventListener('click',catchInsect)
+    game_container.appendChild(insects)
+}
+
+function getrandomlocation(){
+     const width=window.innerWidth;
+     const hight=window.innerHeight;
+     const x =Math.random() * (width - 200) + 100;
+     const y =Math.random() * (hight - 200) + 100;
+     return {x,y}
+}
+
+function catchInsect(){
+     incrresescore();
+     this.classList.add('caught');
+     setTimeout(() => this.remove(), 2000);
+     addinsects();
+}
+function addinsects(){
+     setTimeout(createinsects, 1000);
+     setTimeout(createinsects, 1500);
+}
+function incrresescore(){
+    score++;
+    if(score > 19){
+        message.classList.add('visible');
+    }
+    scoreEl.innerHTML = `Score:${score}`;
+}
